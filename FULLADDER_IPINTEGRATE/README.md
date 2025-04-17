@@ -1,37 +1,41 @@
-# Full Adder Design using Vivado IP Integrator
+# Full Adder Design using Vivado IP Integrator with PMOD Output
 
-This project demonstrates the implementation of a **Full Adder** circuit using the **IP Integrator** feature of **Xilinx Vivado**.  
-Instead of traditional Verilog coding, the Full Adder was designed by creating a **Block Diagram** with custom IP blocks and connecting them visually.
+This project demonstrates the design and testing of a **Full Adder** using **Vivado's IP Integrator**.  
+The output (Sum and Carry) signals are connected to external **PMOD** ports on the **Basys 3 FPGA** and verified using PMOD LEDs.
 
 ## 📚 Project Overview
 
-- **Objective**: Design a Full Adder using graphical design methodology in Vivado (IP Integrator).
-- **Design Method**: Block-based approach using custom modules and IP.
+- **Objective**: Create a Full Adder using block design (IP Integrator) and observe outputs on PMOD-connected LEDs.
+- **Design Method**: Block diagram (no manual HDL coding).
 - **Board Used**: Basys 3 FPGA (Artix-7 XC7A35T).
+- **External Device**: PMOD LEDs for visual output.
+
+---
 
 ## 🛠 Tools & Technologies
 
-- **Xilinx Vivado** (Version 2020.2 or later)
-- **IP Integrator**
-- **Verilog HDL (for IP creation)**
-- **Basys 3 FPGA Development Board**
+- Xilinx Vivado (2020.2 or later recommended)
+- IP Integrator for block design
+- PMOD interfaces on Basys 3
+- Verilog HDL (only for IP if needed)
 
 ---
 
 ## ⚡ Project Workflow
 
-1. Created a custom Full Adder IP.
-2. Connected logic blocks inside the Vivado IP Integrator tool.
-3. Automatically generated the top-level wrapper.
-4. Added pin constraints (XDC file) for Basys 3 board.
-5. Synthesized, implemented, and programmed onto FPGA.
-6. Verified correct operation via hardware testing.
+1. Created custom Full Adder IP or used basic logic blocks.
+2. Connected components inside Vivado's IP Integrator environment.
+3. Generated the top-level wrapper automatically.
+4. Assigned input and output ports:
+   - Inputs (A, B, Cin) from onboard switches.
+   - Outputs (Sum, Cout) routed to PMOD connectors.
+5. Added a custom XDC (constraints) file for PMOD pins.
+6. Implemented, generated bitstream, and programmed the Basys 3 FPGA.
+7. Verified Full Adder functionality using PMOD LEDs.
 
 ---
 
-## 📈 Functional Description
-
-**Full Adder Truth Table:**
+## 📈 Full Adder Functional Table
 
 | A | B | Cin | Sum | Cout |
 |:-:|:-:|:--:|:---:|:----:|
