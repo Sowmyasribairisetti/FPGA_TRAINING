@@ -1,0 +1,58 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x325EF68B325EF68B",
+      "device": "xc7a35tcpg236-1",
+      "name": "design_1",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2019.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "f_aminus_bminus_1_0": ""
+    },
+    "ports": {
+      "a_0": {
+        "direction": "I",
+        "left": "3",
+        "right": "0"
+      },
+      "b_0": {
+        "direction": "I",
+        "left": "3",
+        "right": "0"
+      },
+      "f_0": {
+        "direction": "O",
+        "left": "4",
+        "right": "0"
+      }
+    },
+    "components": {
+      "f_aminus_bminus_1_0": {
+        "vlnv": "xilinx.com:user:f_aminus_bminus_1:1.0",
+        "xci_name": "design_1_f_aminus_bminus_1_0_0"
+      }
+    },
+    "nets": {
+      "a_0_1": {
+        "ports": [
+          "a_0",
+          "f_aminus_bminus_1_0/a"
+        ]
+      },
+      "b_0_1": {
+        "ports": [
+          "b_0",
+          "f_aminus_bminus_1_0/b"
+        ]
+      },
+      "f_aminus_bminus_1_0_f": {
+        "ports": [
+          "f_aminus_bminus_1_0/f",
+          "f_0"
+        ]
+      }
+    }
+  }
+}
